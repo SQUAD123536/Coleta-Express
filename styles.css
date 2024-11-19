@@ -1,0 +1,229 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.0;
+    background-color:rgb(11, 12, 11);
+}
+
+/* Container para alinhar o conteúdo */
+.container {
+    width: 80%;
+    display: flex;
+    align-items: center; /* Alinha a logo, título e navegação verticalmente no centro */
+    flex-wrap: wrap;
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    padding: 0 20px; /* Adiciona espaçamento lateral */
+    justify-content: space-between;
+}
+
+.logo img {
+    max-height: 100px; /* Define a altura máxima da logo */
+    width: 100px; /* Mantém a proporção da imagem */
+    margin-left: 80%;
+    padding: 10px;
+}
+
+.contato{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: forestgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color:rgb(255, 255, 255);
+    margin-left: 20px; 
+}
+
+ ul {
+    display: flex;
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+}
+
+ ul li {
+    margin-left: 20px; /* Espaço entre os itens do menu */
+}
+
+ ul li:first-child {
+    margin-left: 10px;
+}
+
+header  ul li a {
+    color:hsl(167, 57%, 75%);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Seções */
+.secao {
+    padding: 60px 0;
+    background-color: #6bb83f;
+}
+
+.secao h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: hsl(0, 0%, 99%);
+}
+
+.secao p {
+    font-size: 1rem;
+    color: hsl(0, 0%, 1%);
+}
+
+/* Seção de Serviços */
+.servicos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.servico {
+    width: 30%;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.servico h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 6px;
+}
+
+/* Rodapé */
+footer {
+    background: hwb(140 16% 34%);
+    color: #050404;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* ================================
+   RESPONSIVO PARA TELAS MENOR QUE 768PX
+   ================================ */
+
+/* Para telas menores que 768px (celulares e tablets) */
+@media (max-width: 768px) {
+    /* Esconde a logo e os itens de navegação */
+    .logo img,
+    header ul {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        flex-direction: column; /* Coloca os itens em coluna */
+        align-items: flex-start; /* Alinha à esquerda */
+    }
+
+    .secao {
+        padding: 30px 0;
+    }
+
+    header h1 {
+        font-size: 30px; /* Reduz o tamanho da fonte */
+        margin-left: 0; /* Remove a margem */
+    }
+
+    .servicos {
+        flex-direction: column; /* Coloca os serviços em coluna */
+        justify-content: center;
+    }
+
+    .servico {
+        width: 100%; /* Faz os serviços ocuparem toda a largura */
+        margin-bottom: 20px; /* Adiciona espaço entre os serviços */
+    }
+
+    .servico h3 {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+    }
+
+    /* Formulário de Contato */
+    form input,
+    form textarea {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte */
+    }
+
+    footer {
+        padding: 20px 10px; /* Ajusta o espaçamento no rodapé */
+    }
+}
+
+/* ================================
+   RESPONSIVO PARA TELAS MENOR QUE 480PX (Smartphones)
+   ================================ */
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 30px; /* Tamanho menor para telas pequenas */
+    }
+
+    .secao {
+        padding: 30px 0;
+    }
+
+    .servico {
+        padding: 15px; /* Reduz o padding dos serviços */
+    }
+
+    .servico h3 {
+        font-size: 1rem; /* Ajusta o tamanho da fonte do título dos serviços */
+    }
+
+    form button {
+        font-size: 1rem; /* Reduz o tamanho do botão */
+    }
+
+    footer {
+        padding: 10px 5px; /* Ajusta o espaçamento no rodapé */
+    }
+}
